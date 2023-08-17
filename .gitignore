@@ -2,5 +2,9 @@
 rabbitmq/volumes/**
 !rabbitmq/volumes/.gitkeep
 
+# Lets Encrypt
+certs/**
+!certs/.gitkeep
+
 # Mac OS Specific
 .DS_Store
