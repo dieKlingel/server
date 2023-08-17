@@ -1,0 +1,6 @@
+# Docker Volumes
+rabbitmq/volumes/**
+!rabbitmq/volumes/.gitkeep
+
+# Mac OS Specific
+.DS_Store

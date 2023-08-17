@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - 15672:15672
+      - 9001:9001
+      - 1883:1883
+#    command: "/bin/bash -c \"rabbitmq-plugins enable --offline rabbitmq_mqtt rabbitmq_web_mqtt; rabbitmq-server\""
+    volumes:
+      - ./rabbitmq/volumes:/var/lib/rabbitmq/
+      - ./rabbitmq/conf:/etc/rabbitmq/
