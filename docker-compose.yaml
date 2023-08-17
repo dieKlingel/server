@@ -3,10 +3,10 @@ services:
   rabbitmq:
     image: rabbitmq:3-management-alpine
     ports:
-      - 15672:15672
-      - 9001:9001
-      - 1883:1883
-#    command: "/bin/bash -c \"rabbitmq-plugins enable --offline rabbitmq_mqtt rabbitmq_web_mqtt; rabbitmq-server\""
+      - 4443:4443
+      - 9002:9002
+      - 8883:8883
     volumes:
+      -  ./certs:/var/lib/certs/
       - ./rabbitmq/volumes:/var/lib/rabbitmq/
       - ./rabbitmq/conf:/etc/rabbitmq/
